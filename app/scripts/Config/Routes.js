@@ -5,7 +5,7 @@
 angular.module('AngExample')
     .config(['$routeProvider', function($routeProvider) {
         var view = function(view) {
-            return 'partials/' + view.split('.').join('/') + '.html';
+            return 'views/' + view.split('.').join('/') + '.html';
         }
         $routeProvider
         .otherwise({redirectTo: '/'})
