@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "angular": "1.2.x",
-    "angular-route": "1.2.x"
+    "angular-route": "1.2.x",
+	"mobile-angular-ui": "^1.3.4"
   }
 }

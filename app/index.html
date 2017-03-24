@@ -5,22 +5,46 @@
     <title>Angular Example</title>
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/app.css">
+	<!-- Only required for desktop -->
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css" />
+
+    <!-- Always required -->
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css" />
+
+    <!-- Only required for desktop -->
+    <link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css" />
     <!-- endbuild -->
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <header class="column-12 header">
+        <div class="row sidebar sidebar-left">
+			<div class="list-group" ui-turn-off="uiSidebarLeft">
+			  <a class="list-group-item" href="#/home">Home <i class="fa fa-chevron-right pull-right"></i></a>
+			  <a class="list-group-item" href="#/about">About <i class="fa fa-chevron-right pull-right"></i></a>
+			  <a class="list-group-item" href="#/contact">Contact <i class="fa fa-chevron-right pull-right"></i></a>
+			</div>
+            <!--header class="column-12 header">
                 <ul class="navbar pull-right">
                     <li class="nav-item"><a ng-href="#/home">Home</a></li>
                     <li class="nav-item"><a ng-href="#/about">About</a></li>
                     <li class="nav-item"><a ng-href="#/contact">Contact</a></li>
                 </ul>
                 <h3>AngExample</h3>
-            </header>
+            </header-->
         </div>
-        <div class="row">
-            <div class="column-12" ng-view></div>
+        <div class="row app">
+			<div class="navbar navbar-app navbar-absolute-top">
+				<div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+				  Mobile Angular UI
+				</div>
+				<div class="btn-group pull-left">
+				  <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+					<i class="fa fa-bars"></i> Menu
+				  </div>
+				</div>
+			</div>
+
+            <div class="column-12 app-body" ng-view></div>
         </div>
         <div class="row">
             <div class="column-12 footer">
@@ -33,6 +57,8 @@
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
+    <script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
