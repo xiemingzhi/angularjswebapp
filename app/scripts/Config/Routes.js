@@ -13,5 +13,10 @@ angular.module('AngExample')
         .when('/about', {templateUrl: view('about'), controller: 'AboutCtrl'})
         .when('/contact', {templateUrl: view('contact'), controller: 'ContactCtrl'})
         .when('/unautorized', {template: 'The server respond 401 Unautorized.'})
+		.when('/settings', {
+		  templateUrl: 'views/settings.html',
+		  controller: 'SettingsCtrl',
+		  controllerAs: 'settings'
+		})
         ;
     }]);

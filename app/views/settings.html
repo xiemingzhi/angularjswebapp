@@ -1,0 +1,12 @@
+<p>This is the settings view.</p>
+<!-- SettingsCtrl -->
+<div ng-controller="SettingsCtrl">
+    <h4>Checkbox</h4>
+    <pre>Model: {{checkModel}}</pre>
+    <pre>Results: {{checkResults}}</pre>
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="checkModel.left" uib-btn-checkbox>Left</label>
+        <label class="btn btn-primary" ng-model="checkModel.middle" uib-btn-checkbox>Middle</label>
+        <label class="btn btn-primary" ng-model="checkModel.right" uib-btn-checkbox>Right</label>
+    </div>
+</div>
