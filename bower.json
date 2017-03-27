@@ -22,7 +22,11 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "1.2.x",
-    "angular-route": "1.2.x"
+    "angular": "1.5.x",
+    "angular-route": "1.5.x",
+	"angular-animate": "1.5.x",
+	"angular-touch": "1.5.x",
+	"bootstrap": "3.3.x",
+	"angular-bootstrap": "2.5.x"
   }
 }
