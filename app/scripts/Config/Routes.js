@@ -15,3 +15,14 @@ angular.module('AngExample')
         .when('/unautorized', {template: 'The server respond 401 Unautorized.'})
         ;
     }]);
+
+angular.module('AngExample').run([
+  '$rootScope',
+  function($rootScope) {
+    // see what's going on when the route tries to change
+    $rootScope.$on('$locationChangeStart', function(event, newUrl, oldUrl) {
+      // both newUrl and oldUrl are strings
+      console.log('Starting to leave %s to go to %s', oldUrl, newUrl);
+    });
+  }
+]);

@@ -5,10 +5,26 @@
     <title>Angular Example</title>
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
     <!-- endbuild -->
 </head>
-<body>
-    <div class="container">
+<body layout="row">
+		<md-sidenav layout="column" class="sidenav1" md-is-locked-open="$mdMedia('gt-md')">
+			<md-toolbar class="md-theme-indigo">
+				<h3>AngExample</h3>
+			</md-toolbar>
+			<md-list>
+				<md-list-item><a ng-href="#!/home">Home</a></md-list-item>
+                <md-list-item><a ng-href="#!/about">About</a></md-list-item>
+                <md-list-item><a ng-href="#!/contact">Contact</a></md-list-item>
+			</md-list>
+ 		</md-sidenav>
+		<md-content flex layout="column">
+			<ng-view>
+			  View Content
+			</ng-view>
+		</md-content>
+    <!--div class="container">
         <div class="row">
             <header class="column-12 header">
                 <ul class="navbar pull-right">
@@ -27,12 +43,16 @@
               
             </div>
         </div>
-    </div>
+    </div-->
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
