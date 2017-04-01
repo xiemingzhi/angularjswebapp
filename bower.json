@@ -1,9 +1,7 @@
 {
   "name": "angularjswebapp",
   "version": "1.0",
-  "authors": [
-    
-  ],
+  "authors": [],
   "description": "Angular example applications",
   "keywords": [
     "AngularJs",
@@ -12,7 +10,6 @@
     "seed"
   ],
   "license": "MIT",
-
   "ignore": [
     "**/.*",
     "node_modules",
@@ -23,6 +20,7 @@
   ],
   "dependencies": {
     "angular": "1.5.x",
-    "angular-route": "1.5.x"
+    "angular-route": "1.5.x",
+    "ngstorage": "^0.3.11"
   }
 }

@@ -1,6 +1,6 @@
 "use strict";
 angular.module('AngExample')
-    .controller('ContactCtrl', function ($scope, $http) {
+    .controller('ContactCtrl', function ($scope, $http, $localStorage, $sessionStorage) {
     //connect to server on a different domain
     $http.defaults.headers.common = {"Access-Control-Request-Headers": "accept, origin, authorization"}; 
     $http.defaults.headers.common['Authorization'] = 'Basic ' + btoa('admin' + ':' + 'password');//encode
@@ -8,4 +8,13 @@ angular.module('AngExample')
         success(function(data) {
             $scope.contactData = data;
         });
+    
+    $scope.$storage = $localStorage.$default({
+        counter: 44
+    });
+    //define function in controller
+    $scope.increment = function() {
+        $scope.$storage.counter = $scope.$storage.counter + 1;
+    };
+    
     });
