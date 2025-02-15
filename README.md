@@ -16,7 +16,7 @@ grunt serve
 package
 grunt build
 
-# problem
+problem
 >> No "cssmin" targets found.
 Warning: Task "cssmin" failed. Use --force to continue.
 
@@ -37,19 +37,12 @@ move js to scripts
 move css to styles
 move partials to views
 
-# yeoman commands 
-
 create controller 
 yo angular:controller ContactCtrl
 
 create route 
 yo angular:route contact
-
-# IDE
-
-Use netbeans it has best support for javascript projects. 
-For windows download html version (netbeans-8.2-html-windows-x64.exe).
-
+ 
 # For manual
 
 Project cloned from [ang-starter](https://github.com/mriverodorta/ang-starter/)
