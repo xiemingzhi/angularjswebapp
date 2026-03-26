@@ -4,5 +4,3 @@ bower_components/
 .idea
 /dist
 /.tmp
-/nbproject
-/nbproject/private/
